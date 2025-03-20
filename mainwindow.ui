@@ -70,11 +70,37 @@
               <property name="styleSheet">
                <string notr="true">QSpinBox
 {
-background-color: #fff;
+ background-color: #fff;
  border: 1px solid #ccc;
+ color: rgb(0, 0, 0)
  border-radius: 5px;
  padding: 5px;
  font-size: 18px;
+}
+QSpinBox::up-button, QSpinBox::down-button {
+    background-color: #555;
+    border: 1px solid #777;
+    width: 16px;
+    subcontrol-origin: border;
+    subcontrol-position: top right; 
+}
+
+QSpinBox::down-button {
+    subcontrol-position: bottom right;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #777;
+}
+
+QSpinBox::up-arrow, QSpinBox::down-arrow {
+    width: 10px;
+    height: 10px;
+    image: url(:/icons/up-arrow.png); 
+}
+
+QSpinBox::down-arrow {
+    image: url(:/icons/down-arrow.png);
 }</string>
               </property>
               <property name="minimum">
